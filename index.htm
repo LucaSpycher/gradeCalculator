@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+</head>
+<body onload="dummyData">
+<table>
+    <tr id="row1">
+        <th colspan="100%" class="center">Calculate Your grade</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th>Grades</th>
+        <th>Weight</th>
+    </tr>
+    <tr>
+        <th>Homework</th>
+        <td><input id="homeworkGrades"></td>
+        <td><input id="homeworkWeight"></td>
+    </tr>
+    <tr>
+        <th>Quizzes</th>
+        <td><input id="quizGrades"></td>
+        <td><input id="quizWeight"></td>
+    </tr>
+    <tr>
+        <th>Tests</th>
+        <td><input id="testGrades"></td>
+        <td><input id="testWeight"></td>
+    </tr>
+    <tr>
+        <th>Midterm</th>
+        <td><input id="midtermGrade"></td>
+        <td><input id="midtermWeight"></td>
+    </tr>
+    <tr>
+        <th>Grade you want in the class</th>
+        <td><input id="gradeWanted"></td>
+        <td><input id="finalWeight" placeholder="weight of final"></td>
+    </tr>
+    <tr>
+        <td id="buttonsTD" colspan="100%">
+                <button onclick="currentGrade()">current grade</button>
+                <button onclick="final()">grade you need on final</button>
+        </td>
+    </tr>
+</table>
+
+<div id="output"></div>
+
+</body>
+</html>
