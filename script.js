@@ -17,7 +17,7 @@ function gradesAreGood() {
 
     colorGrades([homeworkGrades, quizGrades, testGrades, midtermGrade]);
     colorWeights([homeworkWeight, quizWeight, testWeight, midtermWeight]);
-    if((midtermWeight + homeworkWeight + testWeight + quizWeight) != 1) {
+    if((midtermWeight + homeworkWeight + testWeight + quizWeight) !== 1) { //some of the time it doesn't work
         console.log('bad weights');
         document.getElementById('weightHeader').style.color = 'red';
         //bad weights input
