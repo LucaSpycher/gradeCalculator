@@ -6,50 +6,64 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="script.js"></script>
 </head>
-<body onload="dummyData">
+<body>
 <table>
-    <tr id="row1">
+    <tr class="tableHeader">
         <th colspan="100%" class="center">Calculate Your grade</th>
     </tr>
     <tr>
         <th></th>
-        <th>Grades</th>
-        <th>Weight</th>
+        <th>Grades (%)</th>
+        <th id="weightHeader">Weight (%)</th>
     </tr>
     <tr>
         <th>Homework</th>
-        <td><input id="homeworkGrades"></td>
-        <td><input id="homeworkWeight"></td>
+        <td><input id="homeworkGrades" value="85"></td>
+        <td><input id="homeworkWeight" value="10"></td>
     </tr>
     <tr>
         <th>Quizzes</th>
-        <td><input id="quizGrades"></td>
-        <td><input id="quizWeight"></td>
+        <td><input id="quizGrades" value="85"></td>
+        <td><input id="quizWeight" value="20"></td>
     </tr>
     <tr>
         <th>Tests</th>
-        <td><input id="testGrades"></td>
-        <td><input id="testWeight"></td>
+        <td><input id="testGrades" value="85"></td>
+        <td><input id="testWeight" value="30"></td>
     </tr>
     <tr>
         <th>Midterm</th>
-        <td><input id="midtermGrade"></td>
-        <td><input id="midtermWeight"></td>
+        <td><input id="midtermGrade" value="85"></td>
+        <td><input id="midtermWeight" value="40"></td>
     </tr>
     <tr>
         <th>Grade you want in the class</th>
-        <td><input id="gradeWanted"></td>
+        <td><input id="gradeWanted" value="90"></td>
         <td><input id="finalWeight" placeholder="weight of final"></td>
     </tr>
     <tr>
         <td id="buttonsTD" colspan="100%">
-                <button onclick="currentGrade()">current grade</button>
-                <button onclick="final()">grade you need on final</button>
+            <button onclick="currentGrade()"><b>current grade</b></button>
+            <button onclick="final()"><b>grade you need on final</b></button>
         </td>
     </tr>
 </table>
-
-<div id="output"></div>
-
+<br>
+<table>
+    <tr class="tableHeader">
+        <th colspan="100%" class="center">Your Grades</th>
+    </tr>
+    <tr>
+        <th class="center">Current Grade</th>
+        <th class="center">Grade Needed on Final</th>
+    </tr>
+    <tr>
+        <td id="currentGradeOutput" class="center"></td>
+        <td id="finalGradeOutput" class="center"></td>
+    </tr>
+    <tr id="bottomRow">
+        <th colspan="100%"></th>
+    </tr>
+</table>
 </body>
 </html>

@@ -43,10 +43,20 @@ button:focus {
 
 #buttonsTD {
     padding: 0;
+}
+
+.tableHeader {
+    background-color: black;
+    color: white;
+}
+
+#finalGradeOutput, #currentGradeOutput {
+    height: 50px;
+    width: 50%;
 
 }
 
-#row1 {
-    background-color: black;
-    color: white;
+#bottomRow {
+    background-color: green;
+    height: 20px;
 }
