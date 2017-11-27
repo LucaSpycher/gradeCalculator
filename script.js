@@ -1,5 +1,7 @@
 console.log("does it work");
 var roundedGrade = 85;
+var messagesToUser = ["enter better data my dude", "I said enter better data", "CHILLLL", "why are you so dumb", "just enter some good data for once"];
+var badInputs = 0;
 
 function gradesAreGood() {
     console.log('in gradesAreGood');
@@ -35,8 +37,10 @@ function currentGrade() {
     if(gradesAreGood()) {
         console.log('good stuff');
         document.getElementById('currentGradeOutput').innerHTML = roundedGrade + "%";
+        badInputs = 0;
     } else {
-        document.getElementById('currentGradeOutput').innerHTML = '';
+        document.getElementById('currentGradeOutput').innerHTML = messagesToUser[badInputs];
+        badInputs++;
     }
 }
 
@@ -50,8 +54,10 @@ function final() {
         var gradeNeeded = (gradeWanted - (gradesWeight * (roundedGrade / 100))) / finalWeight;
         var gradeNeededRounded = Math.round(gradeNeeded * 10000) / 100;
         document.getElementById('finalGradeOutput').innerHTML = "You need to get a " + gradeNeededRounded + "% on your final";
+        badInputs = 0;
     } else {
-        document.getElementById('finalGradeOutput').innerHTML = "";
+        document.getElementById('finalGradeOutput').innerHTML = messagesToUser[badInputs];
+        badInputs++;
     }
 }
 
