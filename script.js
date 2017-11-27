@@ -19,7 +19,7 @@ function gradesAreGood() {
 
     colorGrades([homeworkGrades, quizGrades, testGrades, midtermGrade]);
     colorWeights([homeworkWeight, quizWeight, testWeight, midtermWeight]);
-    if((midtermWeight + homeworkWeight + testWeight + quizWeight) !== 1) { //some of the time it doesn't work
+    if((midtermWeight + homeworkWeight + testWeight + quizWeight) != 1) { //some of the time it doesn't work
         console.log('bad weights');
         document.getElementById('weightHeader').style.color = 'red';
         //bad weights input
@@ -39,7 +39,7 @@ function currentGrade() {
         document.getElementById('currentGradeOutput').innerHTML = roundedGrade + "%";
         badInputs = 0;
     } else {
-        document.getElementById('currentGradeOutput').innerHTML = messagesToUser[badInputs];
+        document.getElementById('currentGradeOutput').innerHTML = messagesToUser[badInputs % 5];
         badInputs++;
     }
 }
@@ -56,7 +56,7 @@ function final() {
         document.getElementById('finalGradeOutput').innerHTML = "You need to get a " + gradeNeededRounded + "% on your final";
         badInputs = 0;
     } else {
-        document.getElementById('finalGradeOutput').innerHTML = messagesToUser[badInputs];
+        document.getElementById('finalGradeOutput').innerHTML = messagesToUser[badInputs % 5];
         badInputs++;
     }
 }
