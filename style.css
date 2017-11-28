@@ -60,3 +60,7 @@ button:focus {
     background-color: green;
     height: 20px;
 }
+
+.badPlaceholder::placeholder {
+    color: red;
+}
