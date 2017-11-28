@@ -99,7 +99,7 @@ function alertHighGrades() {
     var grades = [homeworkGrades, quizGrades, testGrades, midtermGrade];
     for(var i = 0; i < 4; i++) {
         if(grades[i] > 1) {
-            alert('your' + ids[i] + 'grade is very high');
+            alert('your ' + ids[i] + ' grade is very high');
         }
     }
 }
